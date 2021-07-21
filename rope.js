@@ -6,7 +6,7 @@ class Rope
   const group = Body.nextGroup(true);
   const rects = Composites.stack(100, 100, this.nlink, 1, 5, 5, function(x, y) {
       return Bodies.rectangle(x, y, 30, 5, { collisionFilter: { group: group } });
-  });
+  })
       
   this.pointA = pointA;
   this.body = Composites.chain(rects, 0.1, 0, -0.6, 0, {stiffness: 0.1, length: 0.1, render: {type: 'line'}});
